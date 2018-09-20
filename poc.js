@@ -1,11 +1,22 @@
-var color = Chart.helpers.color;
+'use strict';
+
+window.chartColors = {
+	red: 'rgb(255, 99, 132)',
+	orange: 'rgb(255, 159, 64)',
+	yellow: 'rgb(255, 205, 86)',
+	green: 'rgb(75, 192, 192)',
+	blue: 'rgb(54, 162, 235)',
+	purple: 'rgb(153, 102, 255)',
+	grey: 'rgb(201, 203, 207)'
+};
+
 var horizontalBarChartData = {
 	labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
 	datasets: [{
 		label: 'value',
-		backgroundColor: ["violet", "indigo", "blue", "green", "yellow", "orange","red"], 
+		backgroundColor: [window.chartColors.blue, window.chartColors.red, window.chartColors.green, window.chartColors.yellow, window.chartColors.purple, window.chartColors.grey,window.chartColors.orange], 
 		//borderColor: window.chartColors.red,
-		borderWidth: 1,
+		//borderWidth: 1,
 		data: [22,32,35,43,21,12,22]
 	}]
 };
@@ -44,7 +55,6 @@ window.onload = function()
 function loadCommunicationInsight(elementname,title)
 {
 	var ctx = document.getElementById(elementname).getContext('2d');
-	ctx.height = 500;
 	window.myHorizontalBar = new Chart(ctx, {
 		type: 'horizontalBar',
 		data: horizontalBarChartData,
@@ -53,14 +63,13 @@ function loadCommunicationInsight(elementname,title)
 			// In this case, we are setting the border of each horizontal bar to be 2px wide
 			elements: {
 				rectangle: {
-					borderWidth: 2,
+					borderWidth: 1,
 				}
 			},
-			responsive: true,
+			responsive: false,
 			maintainAspectRatio: false,
 			legend: {
-				display: false,
-				position: 'right',
+				display: false
 			},
 			title: {
 				display: true,
@@ -89,7 +98,7 @@ function loadCommunicationInsight_grouped(elementname,title)
 			maintainAspectRatio: true,
 			legend: {
 				display: true,
-				position: 'right',
+				position: 'top',
 			},
 			title: {
 				display: true,
