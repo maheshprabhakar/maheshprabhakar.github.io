@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+
+<head>
+	<title>POC - Insights Bar Chart</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
+	<script src="./utils.js"></script>
+	<script src="./poc.js"></script>
+	<style>
+	canvas {
+		-moz-user-select: none;
+		-webkit-user-select: none;
+		-ms-user-select: none;
+	}
+	</style>
+</head>
+
+<body>
+	<h2 style="text-align:center;">Monthly Comminication Insights</h2>
+	<br/><br/><br/>
+	<h3 style="text-align:center;">Monthly Comminication Level</h3>
+	<div style="width: 80%; display: table; padding-left: 60px;">				
+	    <div style="display: table-row">
+	        <div style="display: table-cell;height:40vh; "> <canvas id="canvasComm1"></canvas> </div>
+	        <div style="display: table-cell;height:40vh; "> <canvas id="canvasComm2"></canvas> </div>
+	    </div>
+    </div>    
+	<br/><br/><br/>
+	<h3 style="text-align:center;">Average User sentiments</h3>
+    <div style="width: 80%; display: table; padding-left: 60px;">	
+	    <div style="display: table-row">
+	        <div style="display: table-cell;height:40vh; "> <canvas id="canvasComm3"></canvas> </div>
+	        <div style="display: table-cell;height:40vh; "> <canvas id="canvasComm4"></canvas> </div>
+	         <div style="display: table-cell;height:40vh; "> <canvas id="canvasComm5"></canvas> </div>
+	    </div>
+	</div>
+    <br/><br/><br/>
+    <h3 style="text-align:center;">Top Viewed Communications</h3>
+    <div style="width: 80%; display: table; padding-left: 60px;">	
+	    <div style="display: table-row">
+	        <div style="display: table-cell;height:40vh; "> <canvas id="canvasComm6"></canvas> </div>
+	    </div>
+	</div>
+</body>
+</html>
