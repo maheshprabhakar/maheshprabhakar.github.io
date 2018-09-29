@@ -5,13 +5,6 @@
 	<title>POC - Insights Bar Chart</title>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
 	<script src="./poc.js"></script>
-	<style>
-	canvas {
-		-moz-user-select: none;
-		-webkit-user-select: none;
-		-ms-user-select: none;
-	}
-	</style>
 </head>
 
 <body>
@@ -28,17 +21,24 @@
 	<h3 style="text-align:center;">Average User sentiments</h3>
     <div style="width: 80%; display: table; padding-left: 60px;">	
 	    <div style="display: table-row">
-	        <div style="display: table-cell;height:40vh; "> <canvas height="300vh" width="400vh" id="canvasComm3"></canvas> </div>
-	        <div style="display: table-cell;height:40vh; "> <canvas height="300vh" width="400vh" id="canvasComm4"></canvas> </div>
-	         <div style="display: table-cell;height:40vh; "> <canvas height="300vh" width="400vh" id="canvasComm5"></canvas> </div>
-	    </div>
+	        <div style="display: table-cell;height:40vh; "> <canvas height="300vh" width="400vh" id="canvasComm3"></canvas> 
+	        <a href="#" onclick="this.href = document.getElementById('canvasComm3').toDataURL();" download>Click here to download this image</a>
+	    	</div>
+	        <div style="display: table-cell;height:40vh; "> <canvas height="300vh" width="400vh" id="canvasComm4"></canvas> 
+	         <a href="#" onclick="this.href = document.getElementById('canvasComm4').toDataURL();" download>Click here to download this image</a>
+	     	</div>
+	         <div style="display: table-cell;height:40vh; "> <canvas height="300vh" width="400vh" id="canvasComm5"></canvas>
+ 			<a href="#" onclick="this.href = document.getElementById('canvasComm5').toDataURL();" download>Click here to download this image</a>
+	         </div>
+	    </div>	   
 	</div>
 	<br/><br/><br/>
 	<h3 style="text-align:center;">Average User sentiments(alternative responsive combined)</h3>
     <div style="width: 80%; display: table; padding-left: 60px;">	
 	    <div style="display: table-row">
-	        <div style="display: table-cell;height:40vh; "> <canvas id="canvasComm3_1"></canvas> </div>
+	        <div style="display: table-cell;height:40vh; "> <canvas id="canvasComm3_1"></canvas> </div>	       
 	    </div>
+	    <a href="#" onclick="this.href = document.getElementById('canvasComm3_1').toDataURL();" download>Click here to download this image</a>
 	</div>
     <br/><br/><br/>
     <h3 style="text-align:center;">Top Viewed Communications</h3>

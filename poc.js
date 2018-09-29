@@ -111,4 +111,3 @@ function loadCommunicationInsight_grouped(elementname,title)
     }
 	});
 }
-
